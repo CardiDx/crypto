@@ -1,3 +1,9 @@
+body {
+  background-image: url('/img/shadows.svg');
+  background-position: center -600px;
+  background-repeat: repeat;
+}
+
 .l-layout {
   display: flex;
   flex-direction: column;
