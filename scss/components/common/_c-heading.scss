@@ -1,6 +1,12 @@
 .heading {
   margin-bottom: 6.4rem;
 
+  @include bp-md {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   @include bp-sm {
     margin-bottom: 4.8rem;
   }
@@ -13,6 +19,10 @@
   font-size: 6rem;
   line-height: 120%;
   color: $color-white;
+
+  @include bp-md {
+    font-size: 2.4rem;
+  }
 }
 
 .heading__description {
@@ -21,5 +31,11 @@
 
   @include bp-sm {
     margin-top: $indent-m;
+  }
+}
+
+.heading__button {
+  @include bp-md {
+    margin-top: 2.4rem;
   }
 }

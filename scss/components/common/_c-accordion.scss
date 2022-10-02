@@ -6,7 +6,12 @@
   transition-duration: $motion-l;
   cursor: pointer;
   border-radius: 2.4rem;
+  border: 1px solid #2a2b44;
   margin-bottom: 3.2rem;
+
+  @include bp-md {
+    margin-bottom: 1.6rem;
+  }
 
   &:hover .accordion__header-icon {
     background-color: $color-surface-hover;
@@ -20,6 +25,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @include bp-md {
+    align-items: center;
+  }
 }
 
 .accordion__header-text {
@@ -30,6 +39,8 @@
 
   @include bp-md {
     padding-right: $indent-m;
+    font-size: 1.8rem;
+    line-height: 140%;
   }
 }
 
@@ -69,8 +80,12 @@
   transition-duration: $motion-l;
   color: $color-high-emphasis;
   font-family: $type-family--alt;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.8rem;
+  line-height: 3rem;
+
+  @include bp-md {
+    font-size: 1.6rem;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -100,6 +115,10 @@
       visibility: visible;
       opacity: 1;
       padding: 0 9.6rem 3.2rem 3.2rem;
+
+      @include bp-md {
+        padding-right: 3.2rem;
+      }
     }
   }
 }
