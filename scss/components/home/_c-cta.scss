@@ -1,0 +1,31 @@
+.cta {
+}
+.section {
+}
+.cta__inner {
+  @include section-inner;
+}
+.heading {
+}
+.cta__heading {
+  margin-bottom: 6.4rem;
+}
+.heading__title {
+}
+.cta__content {
+}
+.cta__image-container {
+  display: flex;
+  align-items: flex-start;
+}
+.cta__picture {
+  flex-shrink: 0;
+}
+.cta__image {
+}
+.text {
+}
+.cta__text {
+}
+.button {
+}
