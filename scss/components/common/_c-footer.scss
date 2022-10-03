@@ -100,10 +100,13 @@
 .footer__social-wrapper-title {
   margin-bottom: $indent-s;
 }
+
 .footer__copyright {
   font-family: $type-family--alt;
 
   @include bp-md {
+    text-align: center;
+    line-height: 130%;
     margin: 3.2rem 0;
   }
 }
