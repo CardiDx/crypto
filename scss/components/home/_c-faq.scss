@@ -1,13 +1,14 @@
 .faq {
-  padding-bottom: 220px;
+  padding-bottom: 22rem;
+
+  @include bp-md {
+    padding-bottom: 7.2rem;
+  }
 }
 
 .faq__inner {
   @include section-inner;
   margin: 0 auto;
-}
-
-.faq__title {
 }
 
 .faq__content {

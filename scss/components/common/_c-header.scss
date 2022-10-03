@@ -10,9 +10,8 @@
     // backdrop-filter: blur(1.6rem);
 
     .header__menu {
-      padding: 1.6rem 2.4rem;
+      padding: 2.4rem;
       background-color: #1e1f31;
-      border-radius: 8px;
     }
   }
 
@@ -45,6 +44,7 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  color: $color-primary-200;
 
   @include link-events {
     color: $color-primary-200;
@@ -169,6 +169,7 @@
   margin-right: 4rem;
   transition: color $motion-m ease-in-out;
   cursor: pointer;
+  color: $color-white;
 
   &:last-child {
     margin-right: 0;
@@ -184,18 +185,9 @@
 
   @include bp-md {
     margin-right: 0;
+    width: 100%;
+    padding: 0.8rem 0;
   }
-
-  // @include bp-xl {
-  //   font-size: 1.4rem;
-  //   margin-left: $indent-m;
-  // }
-
-  // @include bp-lg {
-  //   font-size: 1.6rem;
-  //   padding: 1.2rem 0;
-  //   margin-left: 0;
-  // }
 }
 
 .header__right-side {

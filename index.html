@@ -14,9 +14,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#12131A">
-  <meta name="msapplication-TileColor" content="#12131A">
-  <meta name="theme-color" content="#12131A">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a4a9ff">
+  <meta name="msapplication-TileColor" content="#12131a">
+  <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -35,12 +35,12 @@
             <span class="header__logo-text">PayWithoutKyc</span>
           </a>
           <nav class="header__menu">
-            <a class="header__menu-link" data-js-header-link href="#services">Цены</a>
-            <a class="header__menu-link" data-js-header-link href="#price">Как это работает?</a>
-            <a class="header__menu-link" data-js-header-link href="#cta">Контакты</a>
+            <a class="header__menu-link" data-js-header-link href="#price">Цены</a>
+            <a class="header__menu-link" data-js-header-link href="#how-work">Как это работает?</a>
             <a class="header__menu-link" data-js-header-link href="#faq">FAQ</a>
+            <a class="header__menu-link" data-js-header-link href="#footer">Контакты</a>
           </nav>
-          <a href="" class="header__menu-button button">Получить $20</a>
+          <a href="" class="header__menu-button button show-sontact-us">Получить $20</a>
           <button class="header__burger" data-js-header-toggle data-js-header-toggle-active="header__burger--active" aria-label="mobile menu">
             <span></span>
           </button>
@@ -76,11 +76,9 @@
               <img class="home__src" src="/img/payment-screen.png" alt="payment-screen">
             </div>
 
-            <!-- <div class="monets"> -->
-            <img class="home__bitcoin home__monet" src="/img/monet-bitcoin.png" alt="3d monet-bitcoin">
-            <img class="home__litecoin home__monet" src="/img/monet-litecoin.png" alt="3d monet-litecoin">
-            <img class="home__ethereum home__monet" src="/img/monet-ethereum.png" alt="3d monet-ethereum.png">
-            <!-- </div> -->
+            <img class="home__bitcoin home__monet object" src="/img/monet-bitcoin.png" alt="3d monet-bitcoin" data-value="-2">
+            <img class="home__litecoin home__monet object" src="/img/monet-litecoin.png" alt="3d monet-litecoin" data-value="4">
+            <img class="home__ethereum home__monet object" src="/img/monet-ethereum.png" alt="3d monet-ethereum.png" data-value="8">
 
           </div>
 
@@ -121,7 +119,7 @@
     <div class="services__inner">
       <div class="heading services__heading">
         <h2 class="heading__title">Принимаем самые популярные криптовалюты:</h2>
-        <a class="heading__button button" href="#">Подключиться и получить $20</a>
+        <a class="heading__button button show-sontact-us" href="#">Подключиться и получить $20</a>
       </div>
 
       <div class="services__cards">
@@ -296,7 +294,7 @@
         <li class="steps-work__list-item">
           <div class="steps-work__list-item-number">03</div>
           <div class="steps-work__list-item-text">
-            <p class="steps-work__list-item-description">Система проверяет по блокчейну совершение сделки. После обнаружения платежа передаем информацию об успехе в вашу систему. Вариант дублей исключен.</p>
+            <p class="steps-work__list-item-description">Система проверяет по&nbsp;блокчейну совершение сделки. После обнаружения платежа передаем информацию об&nbsp;успехе в&nbsp;вашу систему. Вариант дублей исключен.</p>
           </div>
         </li>
       </ul>
@@ -315,9 +313,9 @@
             <img class="cta__image" src="img/payment.png" width="" height="" alt="Машина доставки товара">
           </picture>
 
-          <div class="heading">
-            <h2 class="cta__heading heading__title">Оплата комиссии PaywithoutKYC происходит <span class="h-type-accent">с&nbsp;вашего счета проекта</span>, который вы пополняете</h2>
-            <a href="#" class="button">Подключиться и получить $20</a>
+          <div class="cta__heading heading">
+            <h2 class="cta__heading-title heading__title">Оплата комиссии PaywithoutKYC происходит <span class="h-type-accent">с&nbsp;вашего счета проекта</span>, который вы пополняете</h2>
+            <a href="#" class="button show-sontact-us">Подключиться и получить $20</a>
           </div>
 
         </div>
@@ -401,13 +399,13 @@
   </div>
   <!--==================== FOOTER ====================-->
 
-  <footer class="l-layout__footer">
+  <footer class="l-layout__footer" id="footer">
     <div class="footer">
       <div class="footer__inner">
 
         <div class="footer__heading heading">
           <div class="footer__heading-title heading__title">Остались вопросы?</div>
-          <a href="#" class="button">Связаться с нами</a>
+          <a href="#" class="button show-sontact-us">Связаться с нами</a>
         </div>
 
         <div class="footer__line">
@@ -430,19 +428,13 @@
       </div>
   </footer>
 
-  <!-- <div class="popup popup--contact-us mfp-hide">
+  <div class="popup popup--contact-us mfp-hide">
     <div class="popup-content">
       <h3 class="popup__title">Оставить<span class="br-mob"></span> заявку</h3>
       <form action="mail.php" id="main-form" class="popup-form send-form" method="POST">
-        <input type="text" name="user-name" class="popup__input" placeholder="Имя">
-        <input type="text" name="phone" class="popup__input" placeholder="Номер телефона">
-        <select name="service" class="popup__select">
-          <option value="unselected" selected>Тип услуги</option>
-          <option value="order-a-project">Заказать проект</option>
-          <option value="order-a-tracing">Заказать трассировку</option>
-          <option value="make-a-shield">Собрать щит</option>
-        </select>
-        <input type="submit" value="Заказать проект" class="popup__btn">
+        <input type="text" name="user-name" class="popup__input" placeholder="Сылка на проект">
+        <input type="text" name="phone" class="popup__input" placeholder="Telegram/What's up">
+        <input type="submit" value="Заказать проект" class="popup__btn button">
       </form>
     </div>
   </div>
@@ -453,14 +445,8 @@
       <h3 class="popup__title popup__title--mb15">Заявка<span class="br-mob"></span> отправлена!</h3>
       <span class="popup__subtitle">Наш менеджер свяжется с Вами в ближайшее время!</span>
     </div>
-  </div> -->
+  </div>
 
-  <!--==================== SCROLL TOP ====================-->
-  <button aria-label="scroll-top" class="scroll-up">
-    <span class="icon icon--arrow-up scroll-up__icon"></span>
-  </button>
-
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--==================== MAIN JS ====================-->
   <script src="/js/app.min.js"></script>
 </body>

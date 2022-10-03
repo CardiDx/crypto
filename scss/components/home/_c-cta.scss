@@ -1,13 +1,13 @@
 .cta {
 }
-.section {
-}
 .cta__inner {
   @include section-inner;
 }
-.heading {
-}
+
 .cta__heading {
+  margin-bottom: 0;
+}
+.cta__heading-title {
   margin-bottom: 6.4rem;
 
   @include bp-md {

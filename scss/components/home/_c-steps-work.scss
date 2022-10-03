@@ -89,13 +89,12 @@
   line-height: 8rem;
   color: $color-white;
   flex: 0 0 auto;
-
   text-align: center;
-
-  background: rgba(30, 164, 86, 0.5);
-  border: 1px solid rgba(36, 238, 114, 0.74);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.74);
   border-radius: 50%;
   backdrop-filter: blur(2px);
+  opacity: 0.38;
 
   position: relative;
   z-index: 1;
@@ -115,9 +114,9 @@
 }
 
 .steps-work__list-item-number--highlighted {
-  background: #315efb;
-  color: #fff;
-  transition-duration: 0.3s;
+  background: rgba(30, 164, 86, 0.5);
+  border: 1px solid rgba(36, 238, 114, 0.74);
+  opacity: 1;
 }
 
 .steps-work__list-item-text {

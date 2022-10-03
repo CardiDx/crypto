@@ -40,31 +40,20 @@ headerLinks.forEach(function (headerLink) {
   });
 });
 
-//intro slider
+//wa parallax
 
-//scroll up
+document.addEventListener("mousemove", parallax);
+function parallax(e) {
+  document.querySelectorAll(".object").forEach(function (move) {
+    var moving_value = move.getAttribute("data-value");
+    var x = (e.clientX * moving_value) / 100;
+    var y = (e.clientY * moving_value) / 100;
 
-var scrollToTopBtn = document.querySelector(".scroll-up");
-var rootElement = document.documentElement;
-
-function handleScroll() {
-  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-  if (rootElement.scrollTop / scrollTotal > 0.8) {
-    scrollToTopBtn.classList.add("scroll-up--show");
-  } else {
-    scrollToTopBtn.classList.remove("scroll-up--show");
-  }
-}
-
-function scrollToTop() {
-  // Scroll to top logic
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth",
+    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
   });
 }
-scrollToTopBtn.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);
+
+// animate steps
 
 let needToPlayAnimation = true;
 let i = 1;
@@ -79,7 +68,7 @@ $(window).scroll(function () {
             ".steps-work__list-item:nth-of-type(" +
               i +
               ") .steps-work__list-item-number"
-          ).addClass("c-steps-work__list-item-number--highlighted");
+          ).addClass("steps-work__list-item-number--highlighted");
           i += 1;
         }, timeout);
         timeout += 700;
@@ -89,48 +78,27 @@ $(window).scroll(function () {
   }
 });
 
-// AOS.init();
-
 // popups
 
-// $(document).on("click", ".show-sontact-us", function () {
-//   let service = $(this).data("service");
-//   $(".popup__select").val(service);
-// });
+$(document).on("click", ".show-sontact-us", function () {
+  let service = $(this).data("service");
+  $(".popup__select").val(service);
+});
 
-// $(".show-sontact-us").magnificPopup({
-//   items: {
-//     src: ".popup--contact-us",
-//   },
-//   type: "inline",
-//   mainClass: "my-mfp-slide-bottom",
-//   fixedContentPos: true,
-// });
+$(".show-sontact-us").magnificPopup({
+  items: {
+    src: ".popup--contact-us",
+  },
+  type: "inline",
+  mainClass: "my-mfp-slide-bottom",
+  fixedContentPos: true,
+});
 
-// $(".show-thank-you").magnificPopup({
-//   items: {
-//     src: ".popup--thank-you",
-//   },
-//   type: "inline",
-//   mainClass: "my-mfp-slide-bottom",
-//   fixedContentPos: true,
-// });
-
-// // send message on email Ajax
-// $("#main-form").submit(function () {
-//   $.ajax({
-//     type: "POST",
-//     url: "mail.php",
-//     data: $(this).serialize(),
-//   }).done(function () {
-//     $(this).find("input").val("");
-
-//     $.magnificPopup.open({
-//       items: {
-//         src: "#thankyou",
-//       },
-//       mainClass: "mfp-letter",
-//     });
-//   });
-//   return false;
-// });
+$(".show-thank-you").magnificPopup({
+  items: {
+    src: ".popup--thank-you",
+  },
+  type: "inline",
+  mainClass: "my-mfp-slide-bottom",
+  fixedContentPos: true,
+});

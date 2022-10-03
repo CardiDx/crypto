@@ -46,10 +46,6 @@ img {
   padding: 108px 0;
 
   @include bp-md {
-    padding: 3.2rem 0;
+    padding: 4rem 0;
   }
-
-  // @include bp-sm {
-  //   padding: 4rem 0;
-  // }
 }

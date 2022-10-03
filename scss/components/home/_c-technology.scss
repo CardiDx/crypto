@@ -65,8 +65,9 @@
 
     @include bp-md {
       max-width: 200px;
-      left: 50%;
-      transform: rotate(-45deg) translate(-50%, -50%);
+      top: 0;
+      left: 40%;
+      transform: rotate(-45deg) translateX(-50%);
     }
   }
 }
