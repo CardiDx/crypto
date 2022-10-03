@@ -26,6 +26,33 @@
   margin-bottom: $indent-xxxl;
 }
 
+@-webkit-keyframes titleflip {
+  0%,
+  20% {
+    transform: translate(0px, -360px);
+  }
+  20%,
+  40% {
+    transform: translate(0px, -270px);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate(0px, -180px);
+  }
+  60%,
+  80% {
+    transform: translate(0px, -90px);
+  }
+  80%,
+  100% {
+    transform: translate(0px, 0);
+  }
+  100%,
+  0% {
+    transform: translate(0px, -360px);
+  }
+}
+
 .home__title {
   font-style: normal;
   font-weight: 600;
@@ -37,6 +64,33 @@
   @include bp-md {
     font-size: 3.2rem;
   }
+}
+
+.home__title-top {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home__title--animate {
+  animation-name: titleflip;
+  animation: titleflip 6s ease-in-out infinite;
+  max-height: 108px;
+}
+
+.home__title--animate,
+li {
+  height: 13.5rem;
+}
+
+.home__title--animate li {
+  position: relative;
+  height: 1em !important;
+
+  animation-name: slider;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .home__description {
