@@ -214,7 +214,14 @@
   @include bp-md {
     width: 10rem;
     height: 10rem;
-    bottom: -5rem;
+    bottom: 3rem;
     right: -3rem;
+  }
+}
+
+.home__button {
+  margin-top: 4rem;
+
+  @include bp-md {
   }
 }

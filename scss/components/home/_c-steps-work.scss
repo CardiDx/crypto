@@ -133,8 +133,12 @@
 .steps-work__list-item-description {
   font-family: $type-family--alt;
 
-  @include bp-md {
+  @include bp-xl {
     font-size: 1.6rem;
+    line-height: 140%;
+  }
+
+  @include bp-md {
     line-height: 150%;
   }
 }
