@@ -30,6 +30,11 @@ headerToggle &&
   (headerToggle.onclick = (e) => {
     header.classList.toggle(headerOpenedClass);
     e.target.classList.toggle(headerToggleActiveClass);
+
+    // content padding when burger active
+    const homeSection = document.getElementById("home");
+    // homeSection.style.paddingTop = "250px";
+    homeSection.classList.toggle("home--padding-top");
   });
 
 var headerLinks = document.querySelectorAll(".c-header__menu-link");

@@ -8,6 +8,13 @@
   }
 }
 
+.home--padding-top {
+  @include bp-lg {
+    padding-top: 30.4rem;
+    transition: padding-top $motion-m ease-in-out;
+  }
+}
+
 .home__inner {
   @include section-inner;
 }
