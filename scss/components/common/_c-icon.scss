@@ -14,6 +14,11 @@
   }
   // variants
 
+  &--dropdown {
+    mask-image: url(/img/icons/dropdown-arrow.svg);
+    -webkit-mask-image: url(/img/icons/dropdown-arrow.svg);
+  }
+
   &--facebook {
     mask-image: url(/img/icons/fb.svg);
     -webkit-mask-image: url(/img/icons/fb.svg);
